@@ -1,6 +1,6 @@
 context:
   name: dooit
-  version: "3.1.0"
+  version: "3.2.2"
   python_min: "3.9"
 
 package:
@@ -26,14 +26,14 @@ requirements:
     - poetry-core
   run:
     - python >=${{ python_min }}
-    - pyyaml >=6.0.2,<6.1
-    - tzlocal >=5.2,<5.3
-    - textual >=0.87.1,<0.88
-    - python-dateutil >=2.9.0.post0,<2.10
-    - sqlalchemy >=2.0.36,<2.1
-    - platformdirs >=4.3.6,<4.4
-    - click >=8.1.7,<8.2
-    - pyperclip >=1.9.0,<2.0
+    - pyyaml >=6.0.2
+    - tzlocal >=5.2
+    - textual >=3.2
+    - python-dateutil >=2.9.0.post0
+    - sqlalchemy >=2.0.36
+    - platformdirs >=4.3.6
+    - click >=8.1.7
+    - pyperclip >=1.9.0
 
 tests:
   - python:
@@ -48,7 +48,7 @@ tests:
         - python ${{ python_min }}
 
 about:
-  homepage: https://github.com/dooit-org/dooit
+  repository: https://github.com/dooit-org/dooit
   summary: 'An awesome TUI todo manager'
   description: |
     Dooit is a TUI todo manager aimed to be highly customizable!
@@ -57,7 +57,7 @@ about:
     Feel free to open any feature requests if you have great ideas
   license: MIT
   license_file: LICENSE
-  documentation: https://dooit-org.github.io/dooit/
+  homepage: https://dooit-org.github.io/dooit/
 
 extra:
   recipe-maintainers:
