@@ -1,7 +1,6 @@
 context:
   name: dooit
-  version: "3.1.0"
-  python_min: "3.9"
+  version: "3.2.2"
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: ceb0faa4d5a93976a3895505b66c11a80a16c616d6a7d20bbfa9e6c2dbe7c05a
+  sha256: 5a9bd501c6291c0c4bd8ed5035a9168f0e38b7245d3b3d1cd927e61f887ef953
 
 build:
   noarch: python
@@ -21,34 +20,34 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - poetry-core
   run:
     - python >=${{ python_min }}
-    - pyyaml >=6.0.2,<6.1
-    - tzlocal >=5.2,<5.3
-    - textual >=0.87.1,<0.88
-    - python-dateutil >=2.9.0.post0,<2.10
-    - sqlalchemy >=2.0.36,<2.1
-    - platformdirs >=4.3.6,<4.4
-    - click >=8.1.7,<8.2
-    - pyperclip >=1.9.0,<2.0
+    - pyyaml >=6.0.2
+    - tzlocal >=5.2
+    - textual >=3.2
+    - python-dateutil >=2.9.0.post0
+    - sqlalchemy >=2.0.36
+    - platformdirs >=4.3.6
+    - click >=8.1.7
+    - pyperclip >=1.9.0
 
 tests:
   - python:
       imports:
       - dooit
       pip_check: true
-      python_version: ${{ python_min}}
+      python_version: ${{ python_min }}.*
   - script:
     - dooit --help
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
 
 about:
-  homepage: https://github.com/dooit-org/dooit
+  repository: https://github.com/dooit-org/dooit
   summary: 'An awesome TUI todo manager'
   description: |
     Dooit is a TUI todo manager aimed to be highly customizable!
@@ -57,7 +56,7 @@ about:
     Feel free to open any feature requests if you have great ideas
   license: MIT
   license_file: LICENSE
-  documentation: https://dooit-org.github.io/dooit/
+  homepage: https://dooit-org.github.io/dooit/
 
 extra:
   recipe-maintainers:
