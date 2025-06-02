@@ -3,13 +3,13 @@ About dooit-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dooit-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/dooit-org/dooit
+Home: https://dooit-org.github.io/dooit/
 
 Package license: MIT
 
 Summary: An awesome TUI todo manager
 
-Documentation: https://dooit-org.github.io/dooit/
+Development: https://github.com/dooit-org/dooit
 
 Dooit is a TUI todo manager aimed to be highly customizable!
 It's built with Textual

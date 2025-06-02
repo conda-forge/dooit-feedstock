@@ -1,7 +1,6 @@
 context:
   name: dooit
   version: "3.2.2"
-  python_min: "3.9"
 
 package:
   name: ${{ name|lower }}
@@ -21,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - poetry-core
   run:
@@ -40,12 +39,12 @@ tests:
       imports:
       - dooit
       pip_check: true
-      python_version: ${{ python_min}}
+      python_version: ${{ python_min }}.*
   - script:
     - dooit --help
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
 
 about:
   repository: https://github.com/dooit-org/dooit
