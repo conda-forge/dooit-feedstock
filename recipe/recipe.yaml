@@ -1,6 +1,6 @@
 context:
   name: dooit
-  version: "3.2.2"
+  version: "3.2.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 5a9bd501c6291c0c4bd8ed5035a9168f0e38b7245d3b3d1cd927e61f887ef953
+  sha256: 5ac238f2d781c438eabc5616428697c7e0905130e80d3b814126f64a925d0c70
 
 build:
   noarch: python
@@ -37,11 +37,11 @@ requirements:
 tests:
   - python:
       imports:
-      - dooit
+        - dooit
       pip_check: true
       python_version: ${{ python_min }}.*
   - script:
-    - dooit --help
+      - dooit --help
     requirements:
       run:
         - python ${{ python_min }}.*
