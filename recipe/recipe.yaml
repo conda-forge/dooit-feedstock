@@ -22,7 +22,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core
+    - hatchling
   run:
     - python >=${{ python_min }}
     - pyyaml >=6.0.2
