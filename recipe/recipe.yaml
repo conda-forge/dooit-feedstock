@@ -1,6 +1,6 @@
 context:
   name: dooit
-  version: "3.3.3"
+  version: "3.3.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 611f078ab3069d6a222e5651e71b72c4578cbfa0db8dda265dd44b4683f84478
+  sha256: ec9022168c4a4568693590840aba0b859cdbca27872f1bef84e39d64c044acd2
 
 build:
   noarch: python
